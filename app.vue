@@ -10,12 +10,12 @@
               </div>
             </div>
             <!--   メインコンテンツ   -->
-<!--            <main class="col-span-12 bg-red-500 md:col-span-8 xl:col-span-6">-->
-<!--              <h1>ad</h1>-->
-<!--            </main>-->
+            <main class="col-span-12 md:col-span-8 xl:col-span-6">
+              <router-view />
+            </main>
 
             <!--   右サイドバー   -->
-            <div class="col-span-12 md:block xs-col-span-1 xl:col-span-4 md:col-span-3 bg-blue-500">
+            <div class="hidden col-span-12 md:block xs-col-span-1 xl:col-span-4 md:col-span-3">
               <div class="sticky top-8">
                 <SidebarRight />
               </div>
