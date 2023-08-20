@@ -2,6 +2,7 @@
   <div>
     <MainSection title="Home" :loading="loading">
       <TweetForm :user="user"/>
+      <TweetListFeed :tweets="homeTweets" />
     </MainSection>
   </div>
 </template>

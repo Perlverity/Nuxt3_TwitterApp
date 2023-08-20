@@ -3,7 +3,7 @@
     <div class="p-2 my-2 hover:bg-blue-50 hover:rounded-full w-min dark:hover:bg-white/20" :class="defaultTransition">
       <nuxt-link to="">
         <div class="w-8 h-8">
-          <LogoTwitter />
+          <LogoTwitter/>
         </div>
       </nuxt-link>
     </div>
@@ -11,7 +11,7 @@
     <div class="mt-2 space-y-3">
       <SidebarLeftTab active>
         <template v-slot:icon>
-          <HomeIcon />
+          <HomeIcon/>
         </template>
         <template v-slot:name>
           ホーム
@@ -20,7 +20,7 @@
 
       <SidebarLeftTab>
         <template v-slot:icon>
-          <HashtagIcon />
+          <HashtagIcon/>
         </template>
         <template v-slot:name>
           話題を検索
@@ -29,7 +29,7 @@
 
       <SidebarLeftTab>
         <template v-slot:icon>
-          <BellIcon />
+          <BellIcon/>
         </template>
         <template v-slot:name>
           通知
@@ -38,7 +38,7 @@
 
       <SidebarLeftTab>
         <template v-slot:icon>
-          <InboxIcon />
+          <InboxIcon/>
         </template>
         <template v-slot:name>
           メッセージ
@@ -47,7 +47,7 @@
 
       <SidebarLeftTab>
         <template v-slot:icon>
-          <BookmarkIcon />
+          <BookmarkIcon/>
         </template>
         <template v-slot:name>
           ブックマーク
@@ -56,7 +56,7 @@
 
       <SidebarLeftTab>
         <template v-slot:icon>
-          <DocumentTextIcon />
+          <DocumentTextIcon/>
         </template>
         <template v-slot:name>
           リスト
@@ -65,7 +65,7 @@
 
       <SidebarLeftTab>
         <template v-slot:icon>
-          <UserIcon />
+          <UserIcon/>
         </template>
         <template v-slot:name>
           プロフィール
@@ -74,20 +74,36 @@
 
       <SidebarLeftTab>
         <template v-slot:icon>
-          <EllipsisHorizontalCircleIcon />
+          <EllipsisHorizontalCircleIcon/>
         </template>
         <template v-slot:name>
           もっと見る
         </template>
       </SidebarLeftTab>
+
+      <div class="hidden xl:block">
+        <UIButton liquid size="lg" @on-click="emits('onTweet')">
+                    <span class="font-bold">
+                        Tweet
+                    </span>
+        </UIButton>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import useTailwindConfig from "../../../composables/useTailwindConfig"
-import { HomeIcon } from "@heroicons/vue/24/solid"
-import { HashtagIcon , BellIcon, InboxIcon, BookmarkIcon, DocumentTextIcon, UserIcon, EllipsisHorizontalCircleIcon } from "@heroicons/vue/24/outline"
+import {HomeIcon} from "@heroicons/vue/24/solid"
+import {
+  HashtagIcon,
+  BellIcon,
+  InboxIcon,
+  BookmarkIcon,
+  DocumentTextIcon,
+  UserIcon,
+  EllipsisHorizontalCircleIcon
+} from "@heroicons/vue/24/outline"
 
-const { defaultTransition } = useTailwindConfig()
+const {defaultTransition} = useTailwindConfig()
 </script>
